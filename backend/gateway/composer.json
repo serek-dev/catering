@@ -6,6 +6,12 @@
         "php": "^8.1",
         "slim/slim": "^4.11",
         "slim/psr7": "^1.6",
-        "laminas/laminas-diactoros": "^2.22"
+        "laminas/laminas-diactoros": "^2.22",
+        "php-di/slim-bridge": "^3.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gateway\\": "src/"
+        }
     }
 }

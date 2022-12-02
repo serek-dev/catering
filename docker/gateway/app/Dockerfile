@@ -14,3 +14,5 @@ RUN composer install \
     --prefer-dist
 
 COPY . .
+
+ENV APP_ENV production
