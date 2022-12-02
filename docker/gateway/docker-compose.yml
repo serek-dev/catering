@@ -1,0 +1,26 @@
+version: '3.6'
+
+services:
+  gateway_web:
+    build:
+      context: ./../../docker/gateway/web
+      dockerfile: Dockerfile
+    depends_on:
+      - gateway_app
+    ports:
+      - "80:80"
+    networks:
+      - catering-backend
+
+  gateway_app:
+    build:
+      context: ./../../backend/gateway
+      dockerfile: ./../../docker/gateway/app/Dockerfile
+    expose:
+      - 9000
+    networks:
+      - catering-backend
+
+networks:
+  catering-backend:
+    driver: "bridge"

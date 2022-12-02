@@ -1,0 +1,11 @@
+{
+    "name": "catering/gateway",
+    "description": "A gateway service that is an entry point for all clients and manages the traffic and auth",
+    "type": "project",
+    "require": {
+        "php": "^8.1",
+        "slim/slim": "^4.11",
+        "slim/psr7": "^1.6",
+        "laminas/laminas-diactoros": "^2.22"
+    }
+}
